@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -13,7 +14,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>m", "ggVG")
 vim.keymap.set("n", "zj", ':call append(line("."), "")<CR>j', { silent = true })
 vim.keymap.set("n", "zk", ':call append(line(".") - 1, "")<CR>k', { silent = true })
-
+vim.keymap.set("n", "ev", "<cmd>vsplit C:\\Users\\gedie\\AppData\\Local\\nvim\\init.lua<CR>")
 vim.keymap.set("x", "<leader>p", '"_dp')
 
 vim.keymap.set("n", "<leader>y", '"+y')
@@ -25,7 +26,7 @@ vim.keymap.set("v", "<leader>d", '"_d')
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", function()
-	vim.lsp.buf.format()
+    vim.lsp.buf.format()
 end)
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -33,3 +34,6 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>")
+
+vim.keymap.set("i", "<C-u>", "<esc>vawUea")
+vim.keymap.set("i", "<C-l>", "<esc>vawuea")

@@ -1,2 +1,3 @@
-require("gedi");
+require("gedi")
+require("config.lazy")
 
